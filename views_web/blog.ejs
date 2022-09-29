@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css_web/main.css">
+    <link rel="stylesheet" href="css_web/blog.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/90effeaa2f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Blog</title>
+    <link rel="icon" href="img_web/favicon.ico">
+  </head>
+  <body>
+    <nav class="landing-navbar">
+      <div class="landing-navbar-container">
+          <div class="landing-nav-top">
+          <div class="nav-heading">
+            <img class="nav-logo" src="img_web/Akshar_logo_white.png" alt="nav-logo">
+            <a href="/home"><h1 class="landing-nav-heading">अAKSHAR</h1></a>
+          </div>
+          <ul class="landing-nav-links">
+              <li><a href="/home" class="landing-nav-list-items" >Home</a></li>
+              <li><a href="/about-us" class="landing-nav-list-items">About us</a></li>
+              <li><a href="/fund/fundraiser" class="landing-nav-list-items">Fundraiser</a></li>
+              <li><a href="/blog" class="landing-nav-list-items">Blog</a></li>
+              <!-- <li class="landing-nav-login-btn">
+                  <a href="/user/login">
+                      <button class="landing-nav-btn">Login / Register
+                          <span class="landing-nav-login-icon"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>
+                      </button>
+                  </a>
+              </li> -->
+          </ul>
+      </div>
+      <label for="check">
+          <span class="landing-nav-ham-btn">
+              <i class="fa-solid fa-bars fa-2xl"></i>
+          </span>
+      </label>
+      <input type="checkbox" name="" id="check">
+      <div class="landing-nav-bottom">
+          <ul class="landing-nav-bottom-links">
+                  <li><a href="/home" class="landing-nav-bottom-list-items">Home</a></li>
+                  <li><a href="/about-us" class="landing-nav-bottom-list-items">About us</a></li>
+                  <li><a href="/fund/fundraiser" class="landing-nav-bottom-list-items">Fundraiser</a></li>
+                  <li><a href="/blog" class="landing-nav-list-items">Blog</a></li>
+                  <!-- <li>
+                      <a href="/user/login">
+                          <button class="landing-nav-bottom-btn">Login / Register
+                              <span class="landing-nav-login-icon"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>
+                          </button>
+                      </a>
+                  </li> -->
+              </ul>
+          </div>
+      </div>
+  </nav>
+  <div class="blog-total-container">
+    <div class="blog-container">
+      <div class="container blog-showcase-container">
+        <div class="blog-img-details">
+          <div class="blog1-img">
+            <img
+              class="blog1-image"
+              src="img_web/blog4.PNG"
+              style="height: 460px"
+            />
+          </div>
+
+          <div class="blog-post-info">
+            <span class="blog-post-info-small">
+              <i class="fas fa-user text-gray"></i>&nbsp;&nbsp;<a href="#"
+                >Admin</a
+              >
+            </span>
+
+            <span class="blog-post-info-small"
+              ><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;<a
+                href="#"
+                >July 20, 2022</a
+              ></span
+            >
+            <span class="blog-post-info-small"
+              ><a href="#">2 Comments</a></span
+            >
+          </div>
+        </div>
+
+        <div class="blog-post-title">
+          <a href="#" class="blog-post-heading"
+            >How to make virtual schooling accessible for underprivileged
+            kids</a
+          >
+          <p class="blog-post-details">
+            Disadvantaged students face many obstacles when trying to pursue
+            an education. The expense to go to school combined with their
+            parents expectations for their children to work and earn a living,
+            means many discontinue their education. This leads to poor
+            employment options in the future.
+          </p>
+          <a href="#" class="blog-readmore-btn"
+            >Read More
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="container blog-showcase-sidebar-container">
+        <h2 class="blog-sidebar-heading">Category</h2>
+        <div class="blog-sidebar-contents">
+          <ul>
+            <li>
+              <div class="blog-sidebar-btn" data-aos="fade-left">
+                <a href="#article">ARTICLES</a>
+              </div>
+              <div class="blog-sidebar-btn" data-aos="fade-left">
+                <a href="#advertisement">ADVERTISEMENT</a>
+              </div>
+              <div class="blog-sidebar-btn" data-aos="fade-left">
+                <a href="#posters">POSTERS</a>
+              </div>
+              <div class="blog-sidebar-btn" data-aos="fade-left">
+                <a href="#online">SOCIAL MEDIA CAMPAIGN</a>
+              </div>
+              <div class="blog-sidebar-btn" data-aos="fade-left">
+                <a href="#outdoor">OUTDOOR CAMPAIGN</a>
+              </div>
+              <div class="blog-sidebar-btn" data-aos="fade-left">
+                <a href="/create-blog">CREATE A BLOG</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-container">
+      <div class="container blog-showcase-container">
+        <div class="blog-img-details">
+          <div class="blog-small-img">
+            <img class="blog-small-image" src="img_web/blog5.webp" />
+          </div>
+        </div>
+
+        <div class="blog-post-title">
+          <a
+            href="https://www.indiatoday.in/education-today/featurephilia/story/how-this-ngo-is-helping-orphaned-underprivileged-kids-continue-their-education-in-covid-19-lockdown-1737659-2020-11-03"
+            class="blog-post-heading"
+            >How this NGO is helping orphaned underprivileged kids continue
+            their education in Covid-19 lockdown</a
+          >
+          <p class="blog-post-details">
+            The Covid-19 pandemic has been a big blow to education for
+            underprivileged children. But NGOs such as the Miracle Foundation
+            have joined hands with childcare institutes (CCIs) to ensure they
+            can minimize this education gap. This is how they are doing it.
+          </p>
+          <a
+            href="https://www.indiatoday.in/education-today/featurephilia/story/how-this-ngo-is-helping-orphaned-underprivileged-kids-continue-their-education-in-covid-19-lockdown-1737659-2020-11-03"
+            class="blog-readmore-btn"
+            >Read More
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="container blog-showcase-container">
+        <div class="blog-img-details">
+          <div class="blog-small-img">
+            <img class="blog-small-image" src="img_web/article-2.png" />
+          </div>
+        </div>
+
+        <div class="blog-post-title">
+          <a
+            href="https://www.indiatoday.in/education-today/featurephilia/story/how-this-ngo-is-helping-orphaned-underprivileged-kids-continue-their-education-in-covid-19-lockdown-1737659-2020-11-03"
+            class="blog-post-heading"
+            >Ways in which you can start educating underpriviledged</a
+          >
+          <p class="blog-post-details">
+            Various children around the World don’t have the necessities, such
+            as food, sanitation, shelter, education, books, fun, laughter. You
+            can help poor children have a better future by taking out time to
+            help the children. This way, helping the needy can also help the
+            nation.
+          </p>
+          <a
+            href="https://www.indiatoday.in/education-today/featurephilia/story/how-this-ngo-is-helping-orphaned-underprivileged-kids-continue-their-education-in-covid-19-lockdown-1737659-2020-11-03"
+            class="blog-readmore-btn"
+            >Read More
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="container blog-showcase-container">
+        <div class="blog-img-details">
+          <div class="blog-small-img">
+            <img class="blog-small-image" src="img_web/article-3.png" />
+          </div>
+        </div>
+
+        <div class="blog-post-title">
+          <a
+            href="https://www.indiatoday.in/education-today/featurephilia/story/how-this-ngo-is-helping-orphaned-underprivileged-kids-continue-their-education-in-covid-19-lockdown-1737659-2020-11-03"
+            class="blog-post-heading"
+            >How to make virtual schooling accessible for underprivileged
+            kids</a
+          >
+          <p class="blog-post-details">
+            Education across the globe has changed dramatically. The global
+            outbreak of Covid-19 in 2020 forced a total of 1.2 billion
+            students out of the classrooms in 186 countries, according to the
+            World Economic Forum report. The students in India went through a
+            similar ordeal as their academic sessions went completely out of
+            the track due to the pandemic.
+          </p>
+          <a
+            href="https://www.indiatoday.in/education-today/featurephilia/story/how-this-ngo-is-helping-orphaned-underprivileged-kids-continue-their-education-in-covid-19-lockdown-1737659-2020-11-03"
+            class="blog-readmore-btn"
+            >Read More
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- advertisement section -->
+    <div id="advertisement" class="blog-container">
+      <div class="ad-main">
+        <div class="blog-img-details">
+          <div class="blog-small-img">
+            <img class="blog-small-image" src="img_web/ad1.png" />
+          </div>
+        </div>
+        <div class="blog-post-title">
+          <a class="blog-post-heading">Daily Live Classes</a>
+          <p class="blog-post-details">
+            Enjoy daily live classes on Akshar App, ask questions, answer live
+            polls, and get your doubts cleared - all while the class is going
+            on
+          </p>
+        </div>
+      </div>
+
+      <div class="ad-main">
+        <div class="blog-img-details">
+          <div class="blog-small-img">
+            <img
+              class="blog-small-image"
+              src="../img_web/ad-1.png"
+              style="border: 1px solid #f3c494"
+            />
+          </div>
+        </div>
+        <div class="blog-post-title">
+          <a class="blog-post-heading"
+            >Online Teachers pays personal attention</a
+          >
+          <p class="blog-post-details">
+            Every teachers pay attention to individual student’s needs making
+            the session interactive and engaging
+          </p>
+        </div>
+      </div>
+      <div class="ad-main">
+        <div class="blog-img-details">
+          <div class="blog-small-img">
+            <img class="blog-small-image" src="img_web/ad-2.png" />
+          </div>
+        </div>
+        <div class="blog-post-title">
+          <a class="blog-post-heading">Easy to track their progress</a>
+          <p class="blog-post-details">
+            See how they’re developing and how far they’ve come
+          </p>
+        </div>
+      </div>
+      <div class="ad-main">
+        <div class="blog-img-details">
+          <div class="blog-small-img">
+            <img class="blog-small-image" src="img_web/ad-3.png" />
+          </div>
+        </div>
+        <div class="blog-post-title">
+          <a class="blog-post-heading">Learn , Practice and Revise</a>
+          <p class="blog-post-details">
+            Akshar app gets access to learn from all live classes. Classes are
+            structured to help students not just learn concepts but also
+            practice and revice them
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- poster section -->
+    <div id="posters" class="blog-container">
+      <div class="poster-img">
+        <div class="blog-small-img">
+          <img
+            class="blog-small-image"
+            src="img_web/poster2.jpg"
+            style="height: 440px"
+          />
+        </div>
+      </div>
+      <div class="poster-img">
+        <div class="blog-small-img">
+          <img
+            class="blog-small-image"
+            src="img_web/poster-right.jpg"
+            style="height: 440px"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Social media campaign section -->
+    <div id="online" class="blog-container" style="margin: 20px 0;">
+      <div class="blog-img-details">
+        <div class="blog-small-img">
+          <img class="blog-small-image" src="img_web/onlinecamp1.png" />
+        </div>
+      </div>
+
+      <div class="blog-img-details">
+        <div class="blog-small-img">
+          <img class="blog-small-image" src="img_web/onlinecamp2.png" />
+        </div>
+      </div>
+
+      <div class="blog-img-details">
+        <div class="blog-small-img">
+          <img class="blog-small-image" src="img_web/onlinecamp3.png" />
+        </div>
+      </div>
+    </div>
+    <!-- Outdoor campaign -->
+    <div id="outdoor" class="blog-container" style="margin: 20px 0;">
+      <div class="blog-img-details">
+        <div class="blog-small-img">
+          <img class="blog-small-image" src="img_web/outdoor1.jpeg" />
+        </div>
+      </div>
+
+      <div class="blog-img-details">
+        <div class="blog-small-img">
+          <img class="blog-small-image" src="img_web/outdoor2.jpeg" />
+        </div>
+      </div>
+
+      <div class="blog-img-details">
+        <div class="blog-small-img">
+          <img class="blog-small-image" src="img_web/outdoor3.jpeg" />
+        </div>
+      </div>
+    </div>
+  </div>
+    <footer>
+      <section class="landing-footer">
+        <div class="landing-footer-container">
+          <img
+            src="img_web/footer-wave.jpg"
+            alt="footer-wave"
+            class="landing-footer-img"
+          />
+          <div class="landing-footer-content">
+            <div class="landing-footer-content-col1">
+              <h2 class="landing-footer-col-head">Website</h2>
+              <div class="landing-footer-h2-underline"></div>
+              <ul class="landing-footer-links">
+                <li class="landing-footer-lists">
+                  <a href="/home">Home</a>
+                </li>
+                <li class="landing-footer-lists">
+                  <a href="/about-us">About us</a>
+                </li>
+                <li class="landing-footer-lists">
+                  <a href="/fund/fundraiser">Fundraiser</a>
+                </li>
+              </ul>
+            </div>
+            <div class="landing-footer-content-col2">
+              <h2 class="landing-footer-col-head">Address</h2>
+              <div class="landing-footer-h2-underline"></div>
+              <p class="landing-footer-address">
+                Kalyani, Nadia <br /><br />
+                West Bengal, India <br /><br />
+                PIN. 741235
+              </p>
+            </div>
+            <div class="landing-footer-content-col3">
+              <h2 class="landing-footer-col-head">Social media links</h2>
+              <div class="landing-footer-h2-underline"></div>
+              <div class="landing-footer-social-media">
+                <span class="landing-footer-icon"
+                  ><a href=" https://www.facebook.com/profile.php?id=100084294644878"><i class="fa-brands fa-facebook-f"></i></a
+                ></span>
+                <span class="landing-footer-twitter-icon"
+                  ><a href=" https://twitter.com/Akshar_aarkss"><i class="fa-brands fa-twitter"></i></a
+                ></span>
+                <span class="landing-footer-icon"
+                  ><a href="https://www.linkedin.com/in/akshar-siksha-ka-avsar-a62421248/"><i class="fa-brands fa-linkedin-in"></i></a
+                ></span>
+                <span class="landing-footer-icon"
+                  ><a href=" https://www.instagram.com/akshar_siksha_ka_avsar/"><i class="fa-brands fa-instagram"></i></a
+                ></span>
+              </div>
+            </div>
+            <div class="landing-footer-content-col4">
+              <img
+                src="img_web/app-promotion.jpg"
+                alt="app-promotion"
+                class="landing-footer-app-promotion"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css_web/main.css" />
+    <link rel="stylesheet" href="css_web/start-fundraiser.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <title>start Fundraiser</title>
+    <link rel="icon" href="img_web/favicon.ico" />
+    <style>
+      .radio-btn {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="start-fund-nav-container">
+        <div class="nav-heading">
+          <img
+            class="nav-logo"
+            src="img_web/Akshar_logo_white.png"
+            alt="nav-logo"
+          />
+          <h1 class="landing-nav-heading">Akshar</h1>
+        </div>
+        <p class="nav-text">Start a fundraiser</p>
+      </div>
+    </nav>
+    <form method="post" action="/fund/start-funding" id="start-fund-form" class="middle-container"  enctype="multipart/form-data"  >
+
+    
+      <p class="fund-purpose">
+        I am raising fund for <span class="purpose">Education</span> cause
+      </p>
+      <div class="fund-category-content">
+        <span class="arrow-icon"><i class="fa-solid fa-caret-up"></i></span>
+        <div class="category-content">
+          <input
+            type="radio"
+            name="cause"
+            class="radio-btn"
+            id="dot-1"
+            value="Education"
+          />
+          <input
+            type="radio"
+            name="cause"
+            class="radio-btn"
+            id="dot-2"
+            value="Medical"
+          />
+          <input
+            type="radio"
+            name="cause"
+            class="radio-btn"
+            id="dot-3"
+            value="Sports"
+          />
+          <input
+            type="radio"
+            name="cause"
+            class="radio-btn"
+            id="dot-4"
+            value="Co-curricular activities"
+          />
+          <div class="category-row">
+            <label for="dot-1" class="category"
+              ><span class="category-icon"
+                ><i class="fa-solid fa-user-graduate"></i></span
+              >Education</label
+            >
+            <label for="dot-2" class="category even-category"
+              ><span class="category-icon"
+                ><i class="fa-solid fa-stethoscope"></i></span
+              >Medical</label
+            >
+          </div>
+          <div class="category-row">
+            <label for="dot-3" class="category"
+              ><span class="category-icon"
+                ><i class="fa-solid fa-table-tennis-paddle-ball"></i></span
+              >Sports</label
+            >
+            <label for="dot-4" class="category even-category"
+              ><span class="category-icon"
+                ><i class="fa-solid fa-palette"></i></span
+              >Co-curricular activities</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      
+
+        <div class="txt_field">
+          <input type="text" name="name" required />
+          <span></span>
+          <label>Name</label>
+        </div>
+        <div class="txt_field">
+          <input type="email" name="email" required />
+          <span></span>
+          <label>Email ID</label>
+        </div>
+        <div class="txt_field">
+          <input type="tel" name="phone_no" pattern="[0-9]{10}" required />
+          <span></span>
+          <label>Phone no.</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" name="prob_statement" required />
+          <span></span>
+          <label>Problem Statement</label>
+        </div>
+        <textarea
+          name="prob_description"
+          id="textarea"
+          cols="30"
+          rows="10"
+          form="start-fund-form"
+          placeholder="Problem Description"
+          required
+        ></textarea>
+        <div class="txt_field">
+          <input type="number" name="target_amount" required />
+          <span></span>
+          <label>Target amount (in Rs.)</label>
+        </div>
+       
+          <label for="uploaded-file" style="color: #adadad;">Upload relevant documents regarding problem:</label>
+          <input type="file" name="uploaded_file" id="uploaded-file" multiple style="color: #adadad;">
+
+      
+      <div class="submit-button">
+        <!-- <a href="#"> -->
+        <div>
+          <input
+            type="submit"
+            class="form-btn"
+            value="Submit"
+            style="cursor: pointer"
+          />
+        </div>
+      </form>
+        <!-- </a> -->
+      </div>
+    </div>
+
+    <script src="js_web/start-fundraiser.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="donate-pay.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="pay-container">
+            <div class="image">
+                <img src="images/donate4.png" alt="">
+            </div>
+            <div class="text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, ipsam.
+            </div>
+            <div class="button" id="rzp-button1">
+                <button type="submit"                   id="rzp-button1"                class="pay-btn">
+                    Pay now
+                </button>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var options = {
+          key: "rzp_test_WxRaJpBIMBim6H", // Enter the Key ID generated from the Dashboard
+          amount: "80", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+          currency: "INR",
+          name: "Acme Corp",
+          description: "Test Transaction",
+          image: "/img_web/favicon.ico",
+          order_id: "<%=orderid%>", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+          callback_url: "https://eneqd3r9zrjok.x.pipedream.net/",
+          prefill: {
+            name: "<%=name%>",
+            email: "<%=email%>",
+            contact:"<%=phone%>",
+          },
+          notes: {
+            address: "Razorpay Corporate Office",
+          },
+          theme: {
+            color: "#3399cc",
+          },
+        };
+        
+        var rzp1 = new Razorpay(options);
+        document.getElementById("rzp-button1").onclick = function (e) {
+          rzp1.open();
+          e.preventDefault();
+        };
+      </script>
+</body>
+</html>

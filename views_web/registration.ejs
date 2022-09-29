@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css_web/registration.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img_web/favicon.ico" />
+    <style>
+      .error-msg{font-size: 20px; color: rgb(135, 33, 33)}
+      .login-button{color: #6262e3; text-decoration: none}
+      .login-button:hover{text-decoration: underline;}
+    </style>
+  </head>
+  <body>
+    <div class="container registration-container">
+      <div class="title">Registration</div>
+      <div class="content">
+        <!-- form -->
+        <form action="/user/registration" method="post">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input
+                type="text"
+                name="full_name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Username</span>
+              <input
+                type="text"
+                name="username"
+                placeholder="Enter your username"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input
+                type="text"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input
+                type="number"
+                name="phone_no"
+                placeholder="Enter your number"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Password</span>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Confirm Password</span>
+              <input
+                type="password"
+                name="conf_password"
+                id="conf_password"
+                placeholder="Confirm your password"
+                onkeyup="check(this)"
+                required
+              />
+            </div>
+          </div>
+          <div class="error-msg" ><%= msg %></div>
+          <div class="gender-details" style="margin-top: 0.5rem">
+            <input type="radio" name="gender" id="dot-1" value="Male" />
+            <input type="radio" name="gender" id="dot-2" value="Female" />
+            <input type="radio" name="gender" id="dot-3" value="Prefer not to say" />
+            <span class="gender-title">Gender</span>
+            <div class="category">
+              <label for="dot-1" value="Male">
+                <span class="dot one"></span>
+                <span class="gender">Male</span>
+              </label>
+              <label for="dot-2" value="Female">
+                <span class="dot two"></span>
+                <span class="gender">Female</span>
+              </label>
+              <label for="dot-3" value="Prefer not to say">
+                <span class="dot three"></span>
+                <span class="gender">Prefer not to say</span>
+              </label>
+            </div>
+          </div>
+          <!-- <a href="/home-page"> -->
+          <div class="button">
+            <input type="submit" value="Register" />
+          </div>
+          <!-- </a> -->
+        </form>
+        <div style="margin-top: 30px; text-align: center">
+          <span class="text"
+            >Do you have an account?
+            <a href="/user/login" class="login-button" 
+              >login Now</a
+            >
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- <script type="text/javascript" >
+    document.getElementById("alert").innerText ="Confirm password does not match"
+    console.log("hi")
+    var password = document.getElementById("password")
+    console.log(password)
+    console.log(document.querySelector("input[name=password]"))
+    console.log(password.value)
+
+    function check(elem){
+        if(elem.value.length > 0){
+          if(elem.value == password.value ){
+            document.getElementById("alert").innerText ="Confirm password does not match"
+          }
+        }
+    }
+  </script> -->
+</html>

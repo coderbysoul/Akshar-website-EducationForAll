@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta
+      name="google-signin-client_id"
+      content="546308796336-oa4hj65hm1n2e1orutq07a2jb6ac6h39.apps.googleusercontent.com"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="css_web/login-landing.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <title>Document</title>
+    <link rel="icon" href="img_web/favicon.ico" />
+    <style>
+      .error-msg {
+        font-size: 20px;
+        color: rgb(135, 33, 33);
+        margin-top: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms">
+        <div class="form login">
+          <span class="title">Login</span>
+          <!-- form -->
+          <form action="/user/user/login" method="post">
+            <div class="input-field">
+              <input
+                type="text"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                name="password"
+                class="password"
+                placeholder="Enter your password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+            <div class="error-msg"><%= msg %></div>
+
+            <!-- forgot password -->
+            
+            <!-- <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck" />
+                <label for="logCheck" class="text">Remember me</label>
+              </div>
+
+              <a href="#" class="text">Forgot password?</a>
+            </div> -->
+
+            <!-- <a href="/home-page"> -->
+            <div class="input-field button">
+              <input type="submit" value="Login" />
+            </div>
+
+            <!-- Oauth login -->
+
+            <!-- </a> -->
+            <!-- <div class="or-line">
+              <hr class="underline" />
+              <div class="or">or</div>
+              <hr class="underline" />
+            </div>
+            <div class="or-login">Login with your social media account</div>
+            <div class="login-icons">
+              <div class="btn-g" type="submit">
+                <a href="/login/google"> <span class="google-icon">G</span></a>
+              </div>
+              <div class="btn-1" type="submit">
+                <a href="/login/facebook"
+                  ><span class="icons"
+                    ><i class="fa-brands fa-facebook-f fa-xl"></i></span
+                ></a>
+              </div>
+              <div class="btn-1" type="submit">
+                <a href="/login/twitter"
+                  ><span class="icons"
+                    ><i class="fa-brands fa-twitter fa-xl"></i></span
+                ></a>
+              </div>
+            </div> -->
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Don't have an account?
+              <a href="/user/registration" class="text signup-link"
+                >Register Now</a
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

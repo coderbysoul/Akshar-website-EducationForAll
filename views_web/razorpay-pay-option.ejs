@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    /> -->
+    <title>Razorpay-Nodejs</title>
+    <style>
+      /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap");
+
+:root {
+  --clr-main-bg: #ffffff;
+  --clr-text: #000;
+  --clr-saffron: #ff9933;
+  --clr-nav-hover: #ff5d2c;
+  --clr-green: #138808;
+  --clr-underline: #83a4ff;
+  --clr-box-shadow: rgba(0, 0, 0, 0.25);
+
+  --fw-200: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-nav-heading: 2rem;
+  --fs-nav-links: 1.15rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.15rem;
+  --fs-400: 1rem;
+
+  --gen-padding: 24px 40px;
+
+  --gen-transition: 0.2s ease-in-out;
+}
+@media (max-width: 50em) {
+    :root {
+      --fs-nav-heading: 1.75rem;
+      --fs-nav-links: 1rem;
+      --fs-600: 1.25rem;
+      --fs-500: 0.9rem;
+      --fs-400: 0.75rem;
+    }
+  }
+
+
+.container{
+    background: linear-gradient(
+      180deg,
+      rgba(255, 209, 160, 1) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(191, 255, 155, 1) 100%
+    );
+    height: 100vh;
+    padding-top: 90px;
+}
+
+.pay-container{
+    width: 720px;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.text{
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.image img{
+    width: 100%;
+}
+
+.pay-btn{
+    width: 100%;
+    background: linear-gradient(135deg, #6262e3, #000080);
+    color: white;
+    padding: 10px 0;
+    font-size: var(--fs-500);
+    border-radius: 4px;
+    margin-top: 20px;
+    font-weight: var(--fw-bold);
+}
+
+.pay-btn:hover{
+    background: linear-gradient(-135deg, #6262e3, #000080);
+}
+    </style>
+  </head>
+  <body style="background-color: #f5f3ef">
+    <div class="container">
+      <div class="pay-container" style="width: 60%;">
+          <div class="image">
+              <img src="img_web/donation-pay.jpg" alt="donation">
+          </div>
+          <div class="text">
+              Thank you for donating to help the underpriviledeged class of society and helping them to make a brighter future.
+          </div>
+          <div class="button" id="rzp-button1">
+              <button type="submit"                   id="rzp-button1"                class="pay-btn">
+                  Donate now
+              </button>
+
+
+
+          </div>
+      </div>
+  </div>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+      var options = {
+        key: "rzp_test_WxRaJpBIMBim6H", // Enter the Key ID generated from the Dashboard
+        amount: "80", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        currency: "INR",
+        name: "Acme Corp",
+        description: "Test Transaction",
+        image: "/img_web/favicon.ico",
+        order_id: "<%=orderid%>", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        callback_url: "/fund/donate-post-payment",
+        prefill: {
+          name: "<%=name%>",
+          email: "<%=email%>",
+          contact:"55555",
+        },
+        notes: {
+          address: "Razorpay Corporate Office",
+        },
+        theme: {
+          color: "#3399cc",
+        },
+      };
+      
+      var rzp1 = new Razorpay(options);
+      document.getElementById("rzp-button1").onclick = function (e) {
+        rzp1.open();
+        e.preventDefault();
+      };
+    </script>
+  </body>
+</html>
