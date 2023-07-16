@@ -6,12 +6,14 @@ const router = express.Router();
 const path = require("path");
 
 const register = require("../model_web/registration");
+
 const app = express();
 
 router.use(express.urlencoded({ extended: true }));
-router.use(express.json());            
+router.use(express.json());
 // database connection
-const uri ="mongodb+srv://raj4321:YIfQx247fYNf0YW0@braincellsdb.ajb1asy.mongodb.net/?retryWrites=true&w=majority";
+const uri =
+  "mongodb+srv://raj4321:YIfQx247fYNf0YW0@braincellsdb.ajb1asy.mongodb.net/?retryWrites=true&w=majority";
 // const uri_2 ="mongodb://raj4321:YIfQx247fYNf0YW0@ac-lvdgsyz-shard-00-00.ajb1asy.mongodb.net:27017,ac-lvdgsyz-shard-00-01.ajb1asy.mongodb.net:27017,ac-lvdgsyz-shard-00-02.ajb1asy.mongodb.net:27017/?ssl=true&replicaSet=atlas-n2mj96-shard-0&authSource=admin&retryWrites=true&w=majority";
 const db = mongoose.connect(uri);
 const con = mongoose.connection;
@@ -21,10 +23,7 @@ router.use(
   "/css_web",
   express.static(path.join(__dirname, "../public/css_web"))
 );
-router.use(
-  "/js_web",
-  express.static(path.join(__dirname, "../public/js_web"))
-);
+router.use("/js_web", express.static(path.join(__dirname, "../public/js_web")));
 router.use(
   "/img_web",
   express.static(path.join(__dirname, "../public/img_web"))
@@ -35,16 +34,12 @@ router.use(
 app.set("views", path.join(__dirname, "../views_web"));
 app.set("view engine", "ejs");
 
-
-
-
 // login
 router.get("/login", async (req, res) => {
-  res.render("login-landing.ejs",{msg:""});
+  res.render("login-landing.ejs", { msg: "" });
 });
 
 router.post("/login", async (req, res) => {
-
   //   checking input data
   const emailcheck = await register.find({ email: req.body.email });
 
@@ -55,27 +50,20 @@ router.post("/login", async (req, res) => {
   // console.log(passwordcheck, "namecheck1");
   // console.log(req.body, "namecheck1");
 
-
-
   // checking input data
 
   if (emailcheck == "") {
     const msg = "Email not found";
     console.log(msg);
-    res.render("login-landing.ejs",{msg:msg});
+    res.render("login-landing.ejs", { msg: msg });
   } else if (passwordcheck == "") {
     const msg = "Incorrect password";
     console.log(msg);
-    res.render("login-landing.ejs",{msg:msg});
+    res.render("login-landing.ejs", { msg: msg });
   } else {
     res.redirect("/user/home-page");
   }
 });
-
-
-
-
-
 
 // registration
 router.get("/registration", async (req, res) => {
