@@ -1,12 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 const server = express();
 
 // database connection
-const uri ="mongodb+srv://raj4321:YIfQx247fYNf0YW0@braincellsdb.ajb1asy.mongodb.net/?retryWrites=true&w=majority";
+const uri =
+  "mongodb+srv://raj4321:YIfQx247fYNf0YW0@braincellsdb.ajb1asy.mongodb.net/?retryWrites=true&w=majority";
 // const uri_2 ="mongodb://raj4321:YIfQx247fYNf0YW0@ac-lvdgsyz-shard-00-00.ajb1asy.mongodb.net:27017,ac-lvdgsyz-shard-00-01.ajb1asy.mongodb.net:27017,ac-lvdgsyz-shard-00-02.ajb1asy.mongodb.net:27017/?ssl=true&replicaSet=atlas-n2mj96-shard-0&authSource=admin&retryWrites=true&w=majority";
 const db = mongoose.connect(uri);
 const con = mongoose.connection;
@@ -44,7 +45,7 @@ app.use("/css_web", express.static(path.join(__dirname, "public/css_web")));
 app.use("/js_web", express.static(path.join(__dirname, "public/js_web")));
 app.use("/img_web", express.static(path.join(__dirname, "public/img_web")));
 
-console.log(path.join(__dirname, "public/css_web"))
+console.log(path.join(__dirname, "public/css_web"));
 
 // Set views for website
 
@@ -77,20 +78,17 @@ app.get("/blog", (req, res) => {
   res.render("blog.ejs");
 });
 
-
 app.get("/create-blog", (req, res) => {
   res.render("create-blog.ejs");
 });
-
 
 app.get("/contact", (req, res) => {
   res.render("contact.ejs");
 });
 
 app.post("/contact", (req, res) => {
-  console.log(req.body)
+  console.log(req.body);
 
- 
   // function SendMail(){
   //   var params ={
   //     from_name : document.getElementById("fullName").value,
@@ -102,7 +100,6 @@ app.post("/contact", (req, res) => {
   //     alert("success!" + res.status)
   //   })
   // }
-
 });
 
 app.get("/blog-logged-in", (req, res) => {
@@ -123,10 +120,9 @@ app.get("/main-page", async (req, res) => {
   res.render("landing-home.ejs");
 });
 
-
-app.get("/designing",(req,res) =>{
-  res.render("razorpay-demo.ejs")
-})
+app.get("/designing", (req, res) => {
+  res.render("razorpay-demo.ejs");
+});
 
 app.listen(port, () => {
   console.log("server started");
